@@ -1,0 +1,18 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin >>n; 
+    //Print all divisors
+    int count=0;
+    for(int i=1;i*i<=n;i++){
+        if(n%i == 0)count++;
+        int m=n/i;
+        if(m!=i){
+            if(n%m == 0)count++;
+        }
+    }
+    if(count == 2)cout << "Prime";
+    else cout << "Not prime";
+}
