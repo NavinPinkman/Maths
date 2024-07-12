@@ -1,0 +1,17 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin >>n; 
+    //153 == 1^3 + 5^3 + 3^3 === 153
+    int temp=n;
+    int count=0;
+    while(n>0){
+        int rev=n%10;
+        count=count+(rev*rev*rev);
+        n/=10;
+    }
+    if(temp==count)cout << "It is a Armstrong no.";
+    else cout << "Not a Armstrong no.";
+}
