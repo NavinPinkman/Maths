@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin >>n; //12
+    int dup=n;
+    int count=0;
+    while(n>0){
+        int rev = n%10;
+        n/=10;
+        if(dup%rev == 0)count++;
+    }
+    cout << count ;
+}
